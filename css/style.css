@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 0 100px;
+    height: 50px;
+    align-items: center;
+    background-color: #1f2937;
+    position: relative;
+}
+
+.logo, .links{
+    width: 50%;
+}
+
+.logo{
+    color: #f9faf8;
+    font-size: 24px;
+    text-align: start;
+}
+
+.burger{
+    display: none;
+    width: 30px;
+    height: 21px;
+    position: absolute;
+    right: 0;
+    margin: 0 10px;
+}
+
+.burger div{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2px 0;
+}
+
+.links ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: end;
+}
+
+.links ul li{
+    margin: 0 5px;
+    text-align: center;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+.links.active{
+    display: flex;
+    width: auto;
+}
+
+.section-one{
+    background-color: #1f2937;
+    display: flex;
+    padding: 100px;
+}
+
+.text, .image{
+    width: 50%;
+}
+
+.text h1{
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
+    width: 70%;
+    padding: 10px 0;
+}
+
+.text p {
+    font-size: 18px;
+    color: #e5e7eb;
+    padding-bottom: 20px;
+    width: 90%;
+
+}
+
+.text button {
+    width: 120px;
+    height: 35px;
+    background-color: #3882f6;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #f9faf8;
+    border: none;
+}
+
+.image img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 768px)  {
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+
+    }
+    .logo, .links {
+        width: 100%;
+    }
+    .links{
+        display: none;
+    }
+    .links ul{
+        flex-direction: column;
+    }
+    .links ul li{
+      padding: 5px 0 0 0;
+    }
+    .burger{
+        display: flex;
+        flex-direction: column;
+    }
+}
